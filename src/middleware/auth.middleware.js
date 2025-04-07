@@ -1,5 +1,5 @@
 import jwt from "jsonwebtoken";
-import { User } from "../models/User.js";
+import User from "../models/User.js";
 
 const protectRoute = async (req, res, next) => {
   try {
@@ -26,3 +26,5 @@ const protectRoute = async (req, res, next) => {
     res.status(500).json({ message: "Token is not valid" });
   }
 };
+
+export default protectRoute;
