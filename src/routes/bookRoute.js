@@ -62,6 +62,20 @@ router.get("/", protectRoute, async (req, res) => {
   }
 });
 
+// Get a single book route
+// GET /api/books/user
+router.get("/user", protectRoute, async (req, res) => {
+  try {
+    const books = await Book.find({ user: req.user._id }).sort({
+      createdAt: -1,
+    });
+    res.status(200).json(books);
+  } catch (error) {
+    console.log("Error in getting user books:", error);
+    res.status(500).json({ message: "Internal server error" });
+  }
+});
+
 //delete book route from user
 router.delete("/:id", protectRoute, async (req, res) => {
   try {
