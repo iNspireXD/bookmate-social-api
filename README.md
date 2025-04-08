@@ -38,11 +38,9 @@ Follow these steps to set up and run the API locally:
 1.  **Clone the repository:**
 
     ```bash
-    git clone [https://github.com/your-username/books-rest-api.git](https://github.com/your-username/books-rest-api.git)
+    git clone https://github.com/iNspireXD/bookmate-social-api.git
     cd books-rest-api
     ```
-
-    _(Replace `https://github.com/your-username/books-rest-api.git` with the actual repository URL)_
 
 2.  **Install dependencies:**
 
